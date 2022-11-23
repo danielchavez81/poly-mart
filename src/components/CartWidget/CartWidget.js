@@ -8,6 +8,7 @@ export default function CartWidget() {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="hover:scale-110 transition-transform ease-in-out duration-75"
     >
       <path
         d="M6 6H30L27 19H9M27 23H10L5 2H2"
