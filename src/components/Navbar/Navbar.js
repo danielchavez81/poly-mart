@@ -11,7 +11,7 @@ export default function Navbar() {
           <LogoIcon />
           <h1 className="text-3xl font-bold cursor-default">Poly.mart</h1>
         </div>
-        <div className="flex flex-row gap-4 items-center">
+        <div className="flex gap-4 items-center">
           <NavCategory title="Low-poly assets" />
           <NavCategory title="Game assets" />
           <NavCategory title="High-poly assets" />
