@@ -23,7 +23,7 @@ export default function ItemListContainer({ greetings }) {
       <h1 className="text-4xl font-bold">Modelos 3D</h1>
       <div className="grid grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
-          <Item product={product} />
+          <Item product={product} key={product.id} />
         ))}
       </div>
     </div>

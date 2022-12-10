@@ -9,7 +9,10 @@ export default function Navbar() {
   return (
     <nav className="w-full h-24 bg-white shadow-lg flex items-center justify-between px-10">
       <section className="flex flex-row gap-24 items-center">
-        <div className="flex items-center gap-8" onClick={() => navigate("/")}>
+        <div
+          className="flex items-center gap-8 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <LogoIcon />
           <h1 className="text-3xl font-bold cursor-default">Poly.mart</h1>
         </div>

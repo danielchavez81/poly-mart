@@ -1,5 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import useItem from "../../hooks/useItem";
 
 export default function ItemDetailContainer() {
-  return <div>ItemDetailContainer</div>;
+  const { id } = useParams();
+  const { item } = useItem(id);
+  //   console.log(item);
+  return <div>{item.title}</div>;
 }
