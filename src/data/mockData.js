@@ -5,6 +5,7 @@ const PRODUCTS = [
     price: 20,
     pictureUrl: "https://i.imgur.com/jzHfTM1b.jpg",
     categoryId: "l-poly",
+    description: "Low poly model of a gun",
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ const PRODUCTS = [
     pictureUrl:
       "https://p.turbosquid.com/ts-thumb/QL/RuemUF/qL/door0012_main/jpg/1650602379/300x300/sharp_fit_q85/5798cc961cac2064e3215ab5a192f66b7bb437d5/door0012_main.jpg",
     categoryId: "g-poly",
+    description: "3d model of a door, for game dev",
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ const PRODUCTS = [
     pictureUrl:
       "https://p.turbosquid.com/ts-thumb/Yh/t2FrMB/OdmqKZuf/1/jpg/1595943759/300x300/sharp_fit_q85/b491c10f8a96c79e1d84d214cf2b816deb06917b/1.jpg",
     categoryId: "h-poly",
+    description: "3d model of a bike with high poly count",
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ const PRODUCTS = [
     price: 15,
     pictureUrl: "https://i.imgur.com/LNG49VQb.jpg",
     categoryId: "l-poly",
+    description: "Low poly model of a tree",
   },
   {
     id: 5,
@@ -36,6 +40,7 @@ const PRODUCTS = [
     pictureUrl:
       "https://p.turbosquid.com/ts-thumb/Kp/KVBABL/J7HM0hYW/handsmale_square/jpg/1450615576/300x300/sharp_fit_q85/cc9e5f78a91216c614178f83e0b1ebc06bd682a5/handsmale_square.jpg",
     categoryId: "g-poly",
+    description: "3d model of a hand, for game dev",
   },
   {
     id: 6,
@@ -44,6 +49,7 @@ const PRODUCTS = [
     pictureUrl:
       "https://p.turbosquid.com/ts-thumb/pQ/fLWgxS/RA/ancientmegasharkriggedvray3dmodel000/jpg/1644368034/300x300/sharp_fit_q85/7971b65070ac387468dc489d7f5491eb63d4efa4/ancientmegasharkriggedvray3dmodel000.jpg",
     categoryId: "h-poly",
+    description: "3d model of a shark with high poly count",
   },
 ];
 
