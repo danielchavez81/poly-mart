@@ -1,23 +1,25 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { PRODUCTS } from "../../data/mockData";
+import { useItems } from "../../hooks/useItems";
 import Item from "../Item/Item";
 
-export default function ItemListContainer({ greetings }) {
+export default function ItemListContainer() {
   const [filteredProducts, setFilteredProducts] = React.useState([]);
 
   const { id } = useParams();
+  const { items } = useItems();
+  // console.log(items);
 
   React.useEffect(() => {
     if (id) {
-      const filteredProducts = PRODUCTS.filter(
+      const filteredProducts = items?.filter(
         (product) => product.categoryId === id
       );
       setFilteredProducts(filteredProducts);
     } else {
-      setFilteredProducts(PRODUCTS);
+      setFilteredProducts(items);
     }
-  }, [id]);
+  }, [id, items]);
 
   return (
     <div className="p-10">

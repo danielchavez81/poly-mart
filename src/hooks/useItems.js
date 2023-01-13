@@ -8,16 +8,14 @@ export const useItems = () => {
 
   React.useEffect(() => {
     const fetchedItems = [];
-    const itemsCollection = collection(db, "items");
+    const itemsCollection = collection(db, "products");
     getDocs(itemsCollection).then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         fetchedItems.push({ ...doc.data(), id: doc.id });
       });
       setItems(fetchedItems);
     });
-
-    //Fetch documents from a collection using getdocs
   }, []);
 
-  return items;
+  return { items };
 };
