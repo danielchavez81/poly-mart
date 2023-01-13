@@ -18,6 +18,7 @@ export default function ItemListContainer({ greetings }) {
       setFilteredProducts(PRODUCTS);
     }
   }, [id]);
+
   return (
     <div className="p-10">
       <h1 className="text-4xl font-bold">Modelos 3D</h1>
