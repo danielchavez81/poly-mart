@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CartWidget() {
+  const navigate = useNavigate();
+  const handleWidgetClick = () => {
+    navigate("/cart");
+  };
+
   return (
     <svg
       width="32"
@@ -9,6 +15,7 @@ export default function CartWidget() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="hover:scale-110 transition-transform ease-in-out duration-75"
+      onClick={handleWidgetClick}
     >
       <path
         d="M6 6H30L27 19H9M27 23H10L5 2H2"
