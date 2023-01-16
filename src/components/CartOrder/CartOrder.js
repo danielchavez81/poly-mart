@@ -4,7 +4,6 @@ import { useCartContext } from "../../context/CartContext";
 export default function CartOrder(props) {
   const { removeItem } = useCartContext();
   const handleRemoveItem = () => {
-    console.log("Se removio el item", props.id);
     removeItem(props.id);
   };
   return (
@@ -12,12 +11,12 @@ export default function CartOrder(props) {
       <h2>{props.title}</h2>
       <h2>Amount: {props.quantity}</h2>
       <h2>Price: ${props.price * props.quantity}</h2>
-      <button
-        className="bg-red-400 w-fit p-2 rounded-md text-white"
+      <h2
         onClick={handleRemoveItem}
+        className="text-red-500 font-bold text-lg cursor-pointer hover:text-red-600 transition-all ease-in-out"
       >
-        <h2>Remove</h2>
-      </button>
+        Remove Item
+      </h2>
     </div>
   );
 }

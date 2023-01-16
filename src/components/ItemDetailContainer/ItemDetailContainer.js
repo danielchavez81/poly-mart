@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import useItem from "../../hooks/useItem";
+import Button from "../Button/Button";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
 
 export default function ItemDetailContainer() {
@@ -33,16 +34,13 @@ export default function ItemDetailContainer() {
         <h2 className="text-2xl font-medium">Price: ${item?.price}</h2>
         <h2 className="text-xl ">{item?.description}</h2>
 
-        <button
+        <Button
           disabled={checkItem(item?.id)}
-          className={`bg-green-500 text-lg text-white font-semibold hover:bg-green-600 transition-all ease-in-out p-4 rounded-lg w-fit ${
-            checkItem(item?.id) &&
-            "cursor-not-allowed opacity-50 hover:bg-green-500"
-          }`}
+          color="green"
           onClick={handleAddToCart}
         >
           <h2 className="text-xl font-bold">Add to cart</h2>
-        </button>
+        </Button>
 
         {checkItem(item?.id) && (
           <h2 className="text-xl font-bold text-red-400">

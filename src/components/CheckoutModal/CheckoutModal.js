@@ -1,6 +1,7 @@
 import Modal from "@mui/material/Modal";
 import React from "react";
 import { useCartContext } from "../../context/CartContext";
+import Button from "../Button/Button";
 import CheckoutInput from "../CheckoutInput/CheckoutInput";
 const CheckoutModal = ({ open, handleClose }) => {
   const [checkoutInfo, setCheckoutInfo] = React.useState({
@@ -47,8 +48,6 @@ const CheckoutModal = ({ open, handleClose }) => {
     <Modal
       open={open}
       onClose={handleClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
       className="flex items-center justify-center"
     >
       <div className="bg-white p-4 rounded-lg">
@@ -83,12 +82,13 @@ const CheckoutModal = ({ open, handleClose }) => {
             }
             label="Address"
           />
-          <button
+          <Button
             onClick={handleCheckout}
+            color="green"
             className="bg-green-500 hover:bg-green-600 transition-colors ease-in-out text-white font-semibold p-2 rounded-lg"
           >
             Checkout
-          </button>
+          </Button>
         </div>
       </div>
     </Modal>
