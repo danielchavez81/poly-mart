@@ -8,7 +8,6 @@ export default function ItemListContainer() {
 
   const { id } = useParams();
   const { items } = useItems();
-  // console.log(items);
 
   React.useEffect(() => {
     if (id) {

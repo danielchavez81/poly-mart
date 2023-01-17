@@ -10,7 +10,7 @@ export default function Cart() {
   const handleOpen = () => setOpen(true);
   return (
     <div className="flex flex-col gap-8 p-20">
-      <div className="flex flex-row gap-10">
+      <div className="flex flex-row gap-10 bg-">
         <Button
           color="green"
           onClick={handleOpen}
@@ -18,7 +18,11 @@ export default function Cart() {
         >
           Checkout
         </Button>
-        <Button color="red" onClick={emptyCart}>
+        <Button
+          color="green"
+          onClick={emptyCart}
+          disabled={cartItems.length === 0}
+        >
           Empty Cart
         </Button>
       </div>

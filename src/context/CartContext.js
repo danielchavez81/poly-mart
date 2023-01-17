@@ -6,9 +6,7 @@ const CartContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = React.useState([]);
 
   const addItem = (itemData, quantity) => {
-    console.log("Se añadio al carro", itemData, quantity);
     const newOrder = { ...itemData, quantity };
-    console.log(newOrder);
     setCartItems([...cartItems, newOrder]);
   };
 
