@@ -1,5 +1,7 @@
 import Modal from "@mui/material/Modal";
 import React from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useCartContext } from "../../context/CartContext";
 import Button from "../Button/Button";
 import CheckoutInput from "../CheckoutInput/CheckoutInput";
@@ -33,7 +35,8 @@ const CheckoutModal = ({ open, handleClose }) => {
       handleClose();
       cleanInputs();
     } else {
-      alert("Please enter all the details");
+      toast.error("Please enter all the details");
+      // alert("Please enter all the details");
     }
   };
   const cleanInputs = () => {
@@ -90,6 +93,7 @@ const CheckoutModal = ({ open, handleClose }) => {
             Checkout
           </Button>
         </div>
+        <ToastContainer />
       </div>
     </Modal>
   );
