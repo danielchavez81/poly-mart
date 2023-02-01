@@ -36,7 +36,6 @@ const CheckoutModal = ({ open, handleClose }) => {
       cleanInputs();
     } else {
       toast.error("Please enter all the details");
-      // alert("Please enter all the details");
     }
   };
   const cleanInputs = () => {
